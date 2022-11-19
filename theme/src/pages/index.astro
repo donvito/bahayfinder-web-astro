@@ -1,0 +1,155 @@
+---
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+  StickyTextImageSection,
+  CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'DonvitoCodes',
+	description: 'DonvitoCodes',
+};
+---
+
+<AnnouncementBar text="Get Live Notifications, Follow me in Twitch!" href="https://twitch.tv/donvitocodes" slot="announcement-bar"/>
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Welcome!</h1>
+			<p>I'm DonvitoCodes, I livestream about Tech & Startups in Twitch. Welcome to my website where you can get updated with what is latest.</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="https://twitch.tv/donvitocodes" customIcon>Follow me in Twitch!
+				<Fragment slot="icon">
+          		<Icon name="ic:baseline-chevron-right"/>
+       			</Fragment>
+			</Button>		
+		</div>		
+		<picture slot="image-container">
+			<img
+				src="/assets/images/donvitocodes/donvitocodes_screenshot.webp"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="My dream is to help Filipinos get into Tech. Let's make the Philippines become a software development powerhouse globally."
+		customerName="DonvitoCodes"
+	/>
+
+	<!-- <ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Why?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-1-cta">Learn More</Button>
+		<div slot="column-2-body">
+			<h2>How?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-2-cta" outlined>Learn More</Button>
+		<div slot="column-3-body">
+			<h2>What?</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+				mollitia cumque. Velit.
+			</p>
+		</div>
+		<Button slot="column-3-cta">Learn More</Button>
+	</ThreeColumnTextSection> -->
+
+	<!-- <YouTubeEmbedSection url="https://youtu.be/lcalIP2CRqU" rounded /> -->
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h2>Featured Episodes</h2>
+
+	  <h3>Ep 1. How to Become a Software Developer</h3>
+      <p>
+		Our maiden episode. In this episode, I discussed with Aivan Monceller, Software Engineer @ Razer Singapore, about how anyone can start the career in software development.
+		<YouTubeEmbedSection url="https://youtu.be/g_V9kKhhwgI" rounded />
+      </p>
+
+	  <h3>Ep 3. How to prepare for Big Tech Company Technical Interview</h3>
+      <p>
+		Spoke to our special guest, <strong>Marc Lester Tan</strong>, our special guest. He's a Filipino developer
+		who is currently working as a Software Engineer @ Meta - Palo Alto, California, United States.	
+		<YouTubeEmbedSection url="https://youtu.be/6vL9uxH6vZ4" rounded />
+      </p>
+
+	  <h3>Ep 6. Let's talk about Startups and Software Engineering with Keith Rull</h3>
+      <p>
+		Spoke to our special guest, <strong>Keith Oliver Rull</strong>, Engineering Leader / Startup Advisor 
+		and VP of Engineering in EyeRate California, US		
+		<YouTubeEmbedSection url="https://youtu.be/aLqmfJwOULI" rounded />
+      </p>
+
+	  <h3>Ep 2. Astro 1.0 Web Framework is out! Let's check it out!</h3>
+      <p>
+		We took a look at Astro.build, a modern web framework which was currently released. We also did a bit of live coding in this episode. 
+		<p/>
+		Check out Astro <a href="https://astro.build/">https://astro.build</a>
+		<YouTubeEmbedSection url="https://youtu.be/YrqBk9B6tZI" rounded />
+      </p>
+
+	  <h3>Ep 5. Free online tech learning resources and tools</h3>
+      <p>
+		In this episode, I went through free learning resources and tools you can use to start software development.	
+		<p/>
+		Check out the list we came up in Github 
+		<br/>
+		<a href="https://github.com/donvito/awesome-tech-learning-resources">https://github.com/donvito/awesome-tech-learning-resources</a>
+		<YouTubeEmbedSection url="https://youtu.be/lcalIP2CRqU" rounded />
+      </p>
+
+
+	  <Button href="/blog/posts/episodes-archive" customIcon>View all episodes<Fragment slot="icon">
+		<Icon name="ic:baseline-chevron-right"/>
+	  </Fragment></Button>
+
+    </div>
+     <picture slot="image-container">
+		<a href="https://youtu.be/aLqmfJwOULI?t=264"><img
+			src="/assets/images/donvitocodes/keithposter.png"
+			alt="Our Next Event"
+			loading="lazy"
+		/>
+		</a>
+	  <p/>
+	  <Button href="https://www.twitch.tv/donvitocodes" customIcon>Follow me in Twitch! <Fragment slot="icon">
+		<Icon name="ic:baseline-chevron-right"/>
+	  </Fragment></Button>
+    </picture>
+  </StickyTextImageSection>
+
+  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+    <h2>Remote Work - Is it really the future? </h2>
+    <p>We'll be talking about remote work, it's challenges and advantages. We'll speak to someone who is doing remote work for the past few years.</p>
+    <Button href="https://www.twitch.tv/donvitocodes" customIcon>Get Live Notifications, Follow me!<Fragment slot="icon">
+      <Icon name="ic:baseline-chevron-right"/>
+    </Fragment></Button>
+  </CtaCardSection>
+
+</Layout>
+
